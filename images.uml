@@ -1,0 +1,88 @@
+@startuml venv
+folder venv {
+  folder bin {
+    component py39 as "python3.9"
+  }
+  folder include
+  folder lib {
+    folder lib39 as "python3.9" {
+      folder sp as "site-packages"
+    }
+  }
+}
+@enduml
+
+
+@startuml venv2
+folder venv
+folder include
+venv --> include
+
+folder bin
+venv --> bin
+
+component py39 as "python3.9"
+bin --> py39
+
+folder lib
+venv --> lib
+
+folder lib39 as "python3.9"
+lib --> lib39
+
+folder sp as "site-packages"
+lib39 --> sp
+@enduml
+
+
+@startuml list-dict
+
+map dict_0 {
+    x => 10
+    y => 8.04
+}
+
+map dict_1 {
+    x => 8
+    y => 6.95
+}
+
+map dict_2 {
+    x => 13
+    y => 7.58
+}
+
+map list {
+    0 *--> dict_0
+    1 *--> dict_1
+    2 *--> dict_2
+}
+
+@enduml
+
+@startuml variables
+
+object 140661211414704 {
+    class = float
+    hash = 326490306866391043
+    value = "3.1415926"
+}
+
+object a
+object b
+
+a --> 140661211414704
+b --> 140661211414704
+
+object 140702685333056 {
+    class = list
+    items = [1, 1, 2, 3, 5, 8]
+}
+
+object x
+object y
+
+x --> 140702685333056
+y --> 140702685333056
+
+@enduml
