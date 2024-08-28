@@ -1,0 +1,16 @@
+[project]
+name = "pivot-to-python"
+version = "2024.9"
+description = "Components and examples for the Pivot to Python book."
+readme = "README.rst"
+requires-python = ">=3.12"
+dependencies = [
+    "jupyterlab>=4.2.4",
+    "matplotlib>=3.9.2",
+    "pytest>=8.3.2",
+    "click>=8.1.7",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
